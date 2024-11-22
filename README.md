@@ -11,7 +11,7 @@ O projeto teve como referência o artigo [Design and Application of a Variable S
 
     1. Treinamento inicial da rede neural com o otimizador Adam;
     2. Introdução da penalidade LASSO;
-    3. Determinação do parâmetro de redução (shrinkage paramter) $\lambda$ através do método de validação cruzada k-fold;
+    3. Determinação do parâmetro de redução (shrinkage paramter) λ através do método de validação cruzada k-fold;
     4. Eliminação das variáveis de entrada com peso 0;
 
     Repetição do processo até que não haja nenhuma variável de peso 0.
@@ -40,7 +40,7 @@ A replicação pode ser vista no notebook [paper_recreation.ipynb](paper_recreat
 
 ## 2. Aplicação em NLP
 
-Visando aplicar tal técnica em um contexto de NLP, a base de dados na [new_implementation.ipynb](new_implementation.ipynb) usada foi [Wiki Movie Plots](https://raw.githubusercontent.com/tiagoft/NLP/main/wiki_movie_plots_drama_comedy.csv) com embeddings gerados usando o SBERT (Sentence-BERT), especificamente com o modelo `all-MiniLM-L6-v2`, implementado na biblioteca `sentence-transformers`.
+Visando aplicar tal técnica em um contexto de NLP, a base de dados usada na [new_implementation.ipynb](new_implementation.ipynb)  foi [Wiki Movie Plots](https://raw.githubusercontent.com/tiagoft/NLP/main/wiki_movie_plots_drama_comedy.csv) com embeddings gerados usando o SBERT (Sentence-BERT), especificamente com o modelo `all-MiniLM-L6-v2`, implementado na biblioteca `sentence-transformers`.
 
 Para fazer a comparação de eficência entre o modelo do paper, o código fonte da [APS 2](https://github.com/acsouza2398/pkmncards_scrapper/tree/aps2) foi usada e, por se tratar de um problema de regressão, o $R^2$ e o MSE entre os modelos foram comparados.
 
