@@ -45,3 +45,10 @@ Visando aplicar tal técnica em um contexto de NLP, a base de dados na [new_impl
 Para fazer a comparação de eficência entre o modelo do paper, o código fonte da [APS 2](https://github.com/acsouza2398/pkmncards_scrapper/tree/aps2) foi usada e, por se tratar de um problema de regressão, o $R^2$ e o MSE entre os modelos foram comparados.
 
 Usando o LASSO MLP, o seu $R^2$ ficou 0.8673 e o MSE ficou 0.0003. Já a implementação da APS2, com autoencoder, o seu $R^2$ ficou 0.1206 e o seu MSE 0.001. 
+
+O modelo com o autoencoder teve menos perdas do que a implementação de LASSO, mostrando que o autoencoder conseguiu reconstruir melhor os encoders, mas ainda sim a perda de ambos os models é baixa.
+
+Ao comparar o $R^2$, percebe-se que o LASSO MLP teve um número maior, porém pode-se suspeitar de overfitting dos dados. Já o modelo com autoencoder, o $R^2$ deu baixo em comparação, com baixo poder explicativo dos dados, o que faz sentido ao se considerar que o propósito do autoencoder não é regredir os dados, mas sim reduzir as dimensões dos dados e compressão.
+
+## Conclusão
+LASSO aplicado a NLP pode ser mais útil para análise de sentimentos, por exemplo, a fim de escolher os melhores termos ou as frases mais relevantes sobre o objeto de estudo. Considerando o caso de uso da APS2, não é uma boa aplicação considerando que não há escolha relevante de features a ser feita com o autoencoder, portanto o algoritmo do L1 não é relevante nesse caso.
